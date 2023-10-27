@@ -78,7 +78,13 @@ class Student extends Person {
 
     public void addGrade(Integer grade){
         if (grade > 0 && grade < 11)
-            grades.add(grade);
+            this.grades.add(grade);
+    }
+
+    public void displayGrades(){
+        for (int i : grades){
+            System.out.println(i);
+        }
     }
 }
 

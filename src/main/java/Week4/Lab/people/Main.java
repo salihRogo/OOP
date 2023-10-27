@@ -19,6 +19,7 @@ public class Main {
 
         Student salih = new Student("Salih Rogo", "Hamdije Cresevljakovica 10");
         salih.addGrade(5);
-
+        salih.addGrade(4);
+        salih.displayGrades();
     }
 }
