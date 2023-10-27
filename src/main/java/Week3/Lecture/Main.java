@@ -1,15 +1,22 @@
 package Week3.Lecture;
 
+import javax.xml.crypto.Data;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        DbConnect db = new DbConnect();
+        DataStructures ds = new DataStructures();
 
-        try {
-            db.getAllCustomers();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        ds.getByGender(Gender.MALE);
+
+        List<User> ages = ds.findAgeGreaterThan(1);
+
+        for (User u : ages) {
+            System.out.println(u.getName());
         }
+
+
     }
 }

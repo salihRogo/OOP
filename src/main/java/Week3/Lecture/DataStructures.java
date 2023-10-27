@@ -12,8 +12,9 @@ public class DataStructures {
     public DataStructures() {
         users = Arrays.asList(
                 new User("Becir", Gender.MALE, 29),
-                new User("Fatima", Gender.FEMALE, 21),
-                new User("Salih", Gender.MALE, 21)
+                new User("Fatima", Gender.FEMALE, 105),
+                new User("Adnan", Gender.MALE, 35)
+
         );
     };
 
@@ -24,15 +25,14 @@ public class DataStructures {
     public Optional<User> getByName(String name){
         return users
                 .stream()
-                .filter(user -> {
-                    return user.getName().equals(name);
-                }).findFirst();
+                .filter(user -> user.getName().equals(name))
+                .findFirst();
     }
 
     public List<User> findAgeGreaterThan (int age) {
         return users
                 .stream()
-                .filter(user -> age >= user.getAge())
+                .filter(user -> age <= user.getAge())
                 .toList();
     }
 
