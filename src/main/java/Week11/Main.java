@@ -1,5 +1,6 @@
 package Week11;
 
+import Week11.Exceptions.EmptyStudentListException;
 import Week11.Exceptions.StudentNotFoundException;
 import java.util.Optional;
 
@@ -12,7 +13,7 @@ public class Main {
         }
 
         try {
-            Optional<Student> foundStudent = studentSystem.getStudentByID(99);
+            Optional<Student> foundStudent = studentSystem.getStudentByID(10);
 
             if (foundStudent.isPresent()) {
                 Student student = foundStudent.get();
@@ -20,11 +21,20 @@ public class Main {
             } else {
                 throw new StudentNotFoundException("Student with that particular ID is not found");
             }
-
         } catch (StudentNotFoundException e) {
             System.out.println(e.getMessage());
         }
 
-        System.out.println(studentSystem.getHighestGPAStudent());
+        try {
+            System.out.println(studentSystem.getHighestGPAStudent());
+        } catch (EmptyStudentListException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            System.out.println(studentSystem.getLongestNameStudent());
+        } catch (EmptyStudentListException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public class StudentSystem {
     List<Student> students;
+
     public StudentSystem(String filename) {
         try {
             this.students = readStudents(filename);
@@ -50,27 +51,35 @@ public class StudentSystem {
                 .findFirst();
     }
 
-    public Student getHighestGPAStudent() throws EmptyStudentListException{
-        double highestGPA = this.students.get(0).getGPA();
-        int idOfStudent = 0;
-        for (Student student : students) {
-            if (student.getGPA() > highestGPA) {
-                highestGPA = student.getGPA();
-                idOfStudent = student.getId();
+    public Student getHighestGPAStudent() throws EmptyStudentListException {
+        if (!this.students.isEmpty()) {
+            double max = 0;
+            int indexOfMax = 0;
+            for (int i = 0; i < this.students.size(); i++) {
+                if (this.students.get(i).getGPA() > max) {
+                    max = this.students.get(i).getGPA();
+                    indexOfMax = i;
+                }
             }
+            return this.students.get(indexOfMax);
+        } else {
+            throw new EmptyStudentListException("List of students is empty.");
         }
-        try {
-            Optional<Student> result = getStudentByID(idOfStudent);
+    }
 
-            if (result.isPresent()) {
-                return result.get();
-            } else {
-                throw new EmptyStudentListException("List of students is empty.");
+    public Student getLongestNameStudent() throws EmptyStudentListException {
+        if (!this.students.isEmpty()) {
+            int longest = 0;
+            int indexOfLongest = 0;
+            for (int i = 0; i < this.students.size(); i++) {
+                if (this.students.get(i).getName().length() > longest) {
+                    longest = this.students.get(i).getName().length();
+                    indexOfLongest = i;
+                }
             }
-
-        } catch (EmptyStudentListException | StudentNotFoundException e) {
-            System.out.println(e.getMessage());
+            return this.students.get(indexOfLongest);
+        } else {
+            throw new EmptyStudentListException("List of students is empty.");
         }
-        return students.get(0);
     }
 }
