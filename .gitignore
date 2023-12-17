@@ -40,3 +40,5 @@ build/
 ### Textual files ###
 .txt
 .csv
+
+/files/

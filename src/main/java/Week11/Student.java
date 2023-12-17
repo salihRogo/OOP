@@ -5,14 +5,14 @@ public class Student {
     private String name;
     private String university;
     private String department;
-    private double GPA;
+    private double gpa;
 
-    public Student(int id, String name, String university, String department, double GPA) {
+    public Student(int id, String name, String university, String department, double gpa) {
         this.id = id;
         this.name = name;
         this.university = university;
         this.department = department;
-        this.GPA = GPA;
+        this.gpa = gpa;
     }
 
     public int getId() {
@@ -31,8 +31,8 @@ public class Student {
         return department;
     }
 
-    public double getGPA() {
-        return GPA;
+    public double getGpa() {
+        return gpa;
     }
 
     @Override

@@ -6,35 +6,29 @@ import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) throws StudentNotFoundException {
-        StudentSystem studentSystem = new StudentSystem("students.csv");
-
-        for (Student student : studentSystem.getStudents()) {
-            // System.out.println(student);
-        }
+        StudentSystem studentSystem = new StudentSystem("files/students.csv");
 
         try {
-            Optional<Student> foundStudent = studentSystem.getStudentByID(10);
-
-            if (foundStudent.isPresent()) {
-                Student student = foundStudent.get();
-                System.out.println("Found student: " + student.getName() + " with ID: " + student.getId());
+            Optional<Student> result = studentSystem.getStudentByID(10);
+            if (result.isPresent()) {
+                System.out.println(result.get());
             } else {
-                throw new StudentNotFoundException("Student with that particular ID is not found");
+                throw new StudentNotFoundException("Student with that particular ID does not exist.");
             }
-        } catch (StudentNotFoundException e) {
-            System.out.println(e.getMessage());
+        } catch (StudentNotFoundException snfe) {
+            System.out.println(snfe.getMessage());
         }
 
         try {
             System.out.println(studentSystem.getHighestGPAStudent());
-        } catch (EmptyStudentListException e) {
-            System.out.println(e.getMessage());
+        } catch (EmptyStudentListException esle) {
+            System.out.println(esle.getMessage());
         }
 
         try {
             System.out.println(studentSystem.getLongestNameStudent());
-        } catch (EmptyStudentListException e) {
-            System.out.println(e.getMessage());
+        } catch (EmptyStudentListException esle) {
+            System.out.println(esle.getMessage());
         }
     }
 }
