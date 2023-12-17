@@ -147,7 +147,7 @@ class StudentSystemTest {
         assertNotSame(highestGPAStudent, longestNameStudent);
     }
 
-@Test
+    @Test
     public void testSameStudent() {
         StudentSystem studentSystem = new StudentSystem("files/students.csv");
 
