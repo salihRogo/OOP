@@ -13,7 +13,7 @@ public class Main {
             if (result.isPresent()) {
                 System.out.println(result.get());
             } else {
-                throw new StudentNotFoundException("Student with that particular ID does not exist.");
+                throw new StudentNotFoundException("Student with that particular ID doesn't exist.");
             }
         } catch (StudentNotFoundException snfe) {
             System.out.println(snfe.getMessage());

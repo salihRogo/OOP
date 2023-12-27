@@ -4,40 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17977eb2-9b55-4bb4-a51d-803681e81a4e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week11/Exceptions/StudentNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week11/Exceptions/StudentNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week11/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week11/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week11/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week11/StudentSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lab/DataStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lab/DataStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lab/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lab/DbConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DataStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DataStructures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DbConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week4/Lab/people/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week4/Lab/people/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week4/Lab/people/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week4/Lab/people/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week4/Lecture/Inheritance/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week4/Lecture/Inheritance/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week4/Lecture/Inheritance/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week4/Lecture/Inheritance/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week5/Lab/Boxes/ToBeStored.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week5/Lab/Boxes/ToBeStored.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week5/Lab/BoxesThirdTask/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week5/Lab/BoxesThirdTask/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week5/Lab/NationalService/NationalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week5/Lab/NationalService/NationalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/BirdwatchersDatabase/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/BirdwatchersDatabase/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/ExerciseFive/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/ExerciseFive/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/ExerciseSeven/NightSky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/ExerciseSeven/NightSky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/Generics/reverseOrderOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/Generics/reverseOrderOfList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/Generics/sumEvenOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/Generics/sumEvenOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsDictionary/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsDictionary/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsPromissoryNote/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsPromissoryNote/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/LibraryManagemntSystem/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/LibraryManagemntSystem/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week7/Lab/EmployeeManagementSystem/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week7/Lab/EmployeeManagementSystem/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week7/Lab/LibraryCatalogSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week7/Lab/LibraryCatalogSystem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week7/Lab/LoggingSystem/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week7/Lab/LoggingSystem/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Week11/StudentSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Week11/StudentSystemTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="17977eb2-9b55-4bb4-a51d-803681e81a4e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,8 +217,17 @@
       <workItem from="1700308137327" duration="12442000" />
       <workItem from="1700342030273" duration="22938000" />
       <workItem from="1700445340389" duration="3192000" />
-      <workItem from="1701774558703" duration="73629000" />
+      <workItem from="1701774558703" duration="75172000" />
     </task>
+    <task id="LOCAL-00001" summary="Test">
+      <option name="closed" value="true" />
+      <created>1703667660230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703667660230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +243,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
