@@ -8,6 +8,7 @@ class Dictionary {
     private HashMap<String, String> dictionary = new HashMap<>();
 
     public void add(String word, String translation) {
+
         this.dictionary.put(word, translation);
     }
 
@@ -42,25 +43,31 @@ class TextUserInterface {
         System.out.println("  translate - asks a word and prints its translation");
         System.out.println("  quit - quit the text user interface \n");
 
+        label:
         while(true) {
             System.out.print("Statement: ");
             String statement = reader.nextLine();
-            if (statement.equals("quit")) {
-                System.out.println("Cheers!");
-                break;
-            } else if (statement.equals("add")){
-                System.out.print("In Finnish: ");
-                String word = reader.nextLine();
-                System.out.print("Translation: ");
-                String translation = reader.nextLine();
-                this.dictionary.add(word, translation);
-                System.out.println();
-            } else if (statement.equals("translate")) {
-                System.out.print("Give a word: ");
-                String word = reader.nextLine();
-                String translation = this.dictionary.translate(word);
-                System.out.print("Translation: ".concat(translation) + "\n");
-                System.out.println();
+            switch (statement) {
+                case "quit":
+                    System.out.println("Cheers!");
+                    break label;
+                case "add": {
+                    System.out.print("In Finnish: ");
+                    String word = reader.nextLine();
+                    System.out.print("Translation: ");
+                    String translation = reader.nextLine();
+                    this.dictionary.add(word, translation);
+                    System.out.println();
+                    break;
+                }
+                case "translate": {
+                    System.out.print("Give a word: ");
+                    String word = reader.nextLine();
+                    String translation = this.dictionary.translate(word);
+                    System.out.print("Translation: ".concat(translation) + "\n");
+                    System.out.println();
+                    break;
+                }
             }
         }
     }

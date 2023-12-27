@@ -1,21 +1,25 @@
 package Week6.Lab.ExerciseFive;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
+
+import static java.util.Arrays.*;
 
 class BinarySearch {
     // Returns index of x if it is present in arr[].
-    int binarySearch(int[] arr, int x)
-    {
-        // int arr[] = { 2, 3, 4, 10, 40, 7, 18 };
-        // { 2, 3, 4, 7, 10, 18, 40 }
+
+    public static boolean search(int[] arr, int x) {
+        // int arr[] = { -3, 2, 3, 4, 7, 18, 12 };
+        Arrays.sort(arr);
+        // int arr[] = { -3, 2, 3, 4, 7, 12, 18 }
         int left = 0, right = arr.length - 1;
         while (left <= right) {
             int middle = left + (right - left) / 2;
 
             // Check if x is present at mid
             if (arr[middle] == x)
-                return middle;
+                return true;
 
             // If x greater, ignore left half
             if (arr[middle] < x)
@@ -27,15 +31,6 @@ class BinarySearch {
         }
 
         // If we reach here, then element was not present
-        return -1;
-    }
-
-    public static boolean search(int[] arr, int x) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == x) {
-                return true;
-            }
-        }
         return false;
     }
 }
@@ -43,13 +38,13 @@ class BinarySearch {
 class Main {
     public static void main(String[] args) {
         // Here you can test your binary search
-        int[] array = { -3, 2, 3, 4, 7, 8, 12 };
+        int[] array = { -3, 2, 3, 4, 7, 18, 12 };
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Values of the array: " + Arrays.toString(array));
         System.out.println();
 
-        System.out.println("Enter your searched number: ");
+        System.out.print("Enter your searched number: ");
         String searchedValue = reader.nextLine();
         System.out.println();
 

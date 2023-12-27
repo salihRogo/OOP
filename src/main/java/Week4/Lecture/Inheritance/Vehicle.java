@@ -71,11 +71,12 @@ class Bicycle extends Vehicle {
         this.doesItHaveDinama = isDoesItHaveDinama;
     }
 
-    public boolean isDoesItHaveDinama() {
+    public boolean getDoesItHaveDinama() {
         return doesItHaveDinama;
     }
 
     public void setDoesItHaveDinama(boolean doesItHaveDinama) {
+
         this.doesItHaveDinama = doesItHaveDinama;
     }
 

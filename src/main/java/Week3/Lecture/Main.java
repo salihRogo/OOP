@@ -9,14 +9,22 @@ public class Main {
     public static void main(String[] args) {
         DataStructures ds = new DataStructures();
 
-        ds.getByGender(Gender.MALE);
+        List<User> resultSet = ds.multiplyAgeReturnUserAndPrint();
 
-        List<User> ages = ds.findAgeGreaterThan(1);
-
-        for (User u : ages) {
-            System.out.println(u.getName());
+        for (User u : resultSet) {
+            System.out.println(u);
         }
 
+        List<User> task2 = ds.multiplyAgeReturnUserAndPrint();
 
+        for (User u : task2) {
+            System.out.println(u);
+        }
+
+        //List<User> task3 = ds.getAll();
+        /*
+        for(User u : task3){
+            System.out.println(u);
+        } */
     }
 }

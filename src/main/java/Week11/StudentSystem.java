@@ -45,7 +45,7 @@ public class StudentSystem {
         return students;
     }
 
-    public Optional<Student> getStudentByID(int searchedId) throws StudentNotFoundException {
+    public Optional<Student> getStudentByID(int searchedId) {
         return students.stream()
                 .filter(student -> student.getId() == searchedId)
                 .findFirst();

@@ -44,17 +44,16 @@ class Book {
     }
 
     @Override
-
     public String toString() {
         return this.title + ", " + this.publisher + ", " + this.year;
     }
 }
 
-class Library extends StringUtils {
-    ArrayList<Book> library = new ArrayList<>();
+class Library {
+    ArrayList<Book> library;
 
     public Library() {
-
+        this.library = new ArrayList<>();
     }
 
     public void addBook(Book newBook) {
@@ -71,7 +70,7 @@ class Library extends StringUtils {
         ArrayList<Book> found = new ArrayList<>();
 
         for (Book b : this.library) {
-            if (Library.included(b.title(), title)) {
+            if (StringUtils.included(b.title(), title)) {
                 found.add(b);
             }
         }
@@ -83,7 +82,7 @@ class Library extends StringUtils {
         ArrayList<Book> found = new ArrayList<>();
 
         for (Book b : this.library) {
-            if (Library.included(b.publisher(), publisher)) {
+            if (StringUtils.included(b.publisher(), publisher)) {
                 found.add(b);
             }
         }

@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-
-record Book(String title, String author, int publicationYear, boolean available) {}
+record Book(String title, String author, int publicationYear, boolean availabiltyStatus) {}
 
 class LibraryCatalog {
     public List<Book> books;
@@ -16,23 +15,14 @@ class LibraryCatalog {
 
     public Optional<Book> checkAvailability(String searchedBook){
         return books.stream()
-                .filter(book -> book.title().equals(searchedBook) && book.available())
+                .filter(book -> book.title().equals(searchedBook) && book.availabiltyStatus())
                 .findFirst();
     }
 
     public Optional<Book> getFirstAvailableBookByAuthor(String authors_name) {
         return books.stream()
-                .filter(book -> book.author().equals(authors_name) && book.available())
+                .filter(book -> book.author().equals(authors_name) && book.availabiltyStatus())
                 .findFirst();
-    }
-
-    public void updateAvailabilityV0(String title, boolean status) {
-        books.forEach(book -> {
-            if(book.title().equals(title)) {
-                Book newBook = new Book(book.title(), book.author(), book.publicationYear(), status);
-                books.set(books.indexOf(book), newBook);
-            }
-        });
     }
 
     public void updateAvailability(String title, boolean status) {
@@ -54,16 +44,16 @@ class Start {
         LibraryCatalog libraryCatalog = new LibraryCatalog(bookList);
 
         Optional<Book> availableBook = libraryCatalog.checkAvailability("1984");
-        System.out.println("Is '1984' available? " + availableBook.isPresent());
+        System.out.println("Is '1984' availabiltyStatus? " + availableBook.isPresent());
 
         Optional<Book> firstAvailableByAuthor = libraryCatalog.getFirstAvailableBookByAuthor("J.D. Salinger");
-        System.out.println("First available book by J.D. Salinger: " + firstAvailableByAuthor.orElse(null));
+        System.out.println("First availabiltyStatus book by J.D. Salinger: " + firstAvailableByAuthor.orElse(null));
 
         libraryCatalog.updateAvailability("To Kill a Mockingbird", true);
         System.out.println("Updated availability of 'To Kill a Mockingbird'");
 
         System.out.println("Updated Book List:");
-        libraryCatalog.books.forEach(book -> System.out.println(book.title() + " - Available: " + book.available()));
+        libraryCatalog.books.forEach(book -> System.out.println(book.title() + " - Available: " + book.availabiltyStatus()));
     }
 }
 

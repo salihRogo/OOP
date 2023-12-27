@@ -3,24 +3,41 @@ package Week11;
 import Week11.Exceptions.EmptyStudentListException;
 import Week11.Exceptions.StudentNotFoundException;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
 
 class StudentSystemTest {
+    static StudentSystem system;
+
+    @BeforeEach
+    void init() {
+        try {
+            system = new StudentSystem("files/students.csv");
+            if (system.getStudents().isEmpty()) {
+                throw new IOException();
+            }
+        } catch (IOException e) {
+            System.out.println("Failed to initialize StudentSystem: " + e.getMessage());
+        }
+    }
 
     @Test
     void testifStudentisPresent() {
-        StudentSystem studentSystem = new StudentSystem("files/students.csv");
-
-        assertNotNull(studentSystem.getStudents());
-
-        assertTrue(!studentSystem.getStudents().isEmpty());
+        assertTrue(system.students.size() > 0);
     }
+
+    @Test
+    void teststudentWithId100() {
+        assertFalse(system.getStudentByID(100).isPresent());
+    }
+
 
     @Test
     void testStudentWithId100() {
@@ -28,16 +45,8 @@ class StudentSystemTest {
 
         Optional<Student> studentWithId100;
 
-        try {
-            studentWithId100 =  studentSystem.getStudentByID(100);
+        studentWithId100 =  studentSystem.getStudentByID(100);
 
-            if (studentWithId100.isPresent()) {
-                throw new StudentNotFoundException();
-            }
-
-        } catch (StudentNotFoundException e) {
-            throw new RuntimeException();
-        }
 
         assertFalse(studentWithId100.isPresent());
     }
@@ -147,7 +156,7 @@ class StudentSystemTest {
         assertNotSame(highestGPAStudent, longestNameStudent);
     }
 
-@Test
+    @Test
     public void testSameStudent() {
         StudentSystem studentSystem = new StudentSystem("files/students.csv");
 
@@ -167,7 +176,7 @@ class StudentSystemTest {
             }
 
         } catch (StudentNotFoundException e) {
-        throw new RuntimeException();
+            throw new RuntimeException();
         }
 
         assertNotSame(studentWithId12.orElse(null), highestGPAStudent);

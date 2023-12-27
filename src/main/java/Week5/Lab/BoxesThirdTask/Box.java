@@ -5,7 +5,7 @@ import java.util.Collection;
 
 class Thing {
     private double weight;
-    private String name;
+    private final String name;
 
     public double weight() {
         return this.weight;
@@ -27,9 +27,18 @@ class Thing {
     public Thing(String name) {
         this.name = name;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Thing) {
+            Thing thing = (Thing) o;
+            return this.name.equals(thing.name);
+        }
+        return false;
+    }
 }
 
-public abstract class Box {
+abstract class Box {
     public abstract void add(Thing thing);
 
     public void add(Collection<Thing> things) {
@@ -42,27 +51,28 @@ public abstract class Box {
 }
 
 class MaxWeightBox extends Box {
-    private ArrayList<Thing> things = new ArrayList<>();
-    private int maxWeight;
+    private ArrayList<Thing> things;
+    private final int maxWeight;
     private int weightInBox;
 
     public MaxWeightBox(int maxWeight) {
         this.maxWeight = maxWeight;
         this.weightInBox = 0;
+        this.things = new ArrayList<>();
     }
 
     @Override
     public void add(Thing thing) {
-        if (this.weightInBox < this.maxWeight) {
+        if (this.maxWeight >= this.weightInBox + thing.weight()) {
             this.weightInBox += thing.weight();
-            things.add(thing);
+            this.things.add(thing);
         }
     }
 
     @Override
     public boolean isInTheBox(Thing thing) {
         for (Thing t : things){
-            if (t.getName().equals(thing.getName())){
+            if (t.equals(thing)) {
                 return true;
             }
         }
@@ -71,21 +81,21 @@ class MaxWeightBox extends Box {
 }
 
 class OneThingBox extends Box {
-    private ArrayList<Thing> things = new ArrayList<>();
+    private ArrayList<Thing> things;
     public OneThingBox(){
-
+        this.things = new ArrayList<>();
     }
 
     public void add(Thing thing) {
-        if (this.things.size() < 1){
-            things.add(thing);
+        if (this.things.isEmpty()){
+            this.things.add(thing);
         }
     }
 
     @Override
     public boolean isInTheBox(Thing thing) {
         for (Thing t : things){
-            if (t.getName().equals(thing.getName())){
+            if (t.equals(thing)){
                 return true;
             }
         }
@@ -135,7 +145,6 @@ class Main {
         Box box1 = new MaxWeightBox(10);
         Box box2 = new OneThingBox();
         Box box3 = new BlackHoleBox();
-        Box box4 = new MaxWeightBox(5);
 
         // Adding things to the boxes
         Thing thing1 = new Thing("Thing1", 3.0);
@@ -144,7 +153,6 @@ class Main {
         box1.add(thing1);
         box2.add(thing2);
         box3.add(thing3);
-        box4.add(thing1);
 
         // Downcasting cautiously using the instanceof operator
         if (box1 instanceof MaxWeightBox) {
@@ -162,9 +170,5 @@ class Main {
             System.out.println("Downcasted to BlackHoleBox: " + blackHoleBox.isInTheBox(thing3));
         }
 
-        if (box4 instanceof MaxWeightBox) {
-            MaxWeightBox maxWeightBox2 = (MaxWeightBox) box4;
-            System.out.println("Downcasted to MaxWeightBox: " + maxWeightBox2.isInTheBox(thing1));
-        }
     }
 }

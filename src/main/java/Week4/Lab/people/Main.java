@@ -21,5 +21,10 @@ public class Main {
         salih.addGrade(5);
         salih.addGrade(4);
         salih.displayGrades();
+        Student emina = new Student("Emina Rogo", "Abdurahmana Syria 19");
+        emina.addGrade(10);
+        emina.addGrade(1);
+        emina.addGrade(4);
+        emina.displayGrades();
     }
 }

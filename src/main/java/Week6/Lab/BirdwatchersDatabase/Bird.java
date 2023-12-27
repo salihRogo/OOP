@@ -33,7 +33,7 @@ class Bird {
     public void setObservations() {
         this.observations++;
     }
-
+    @Override
     public String toString() {
         return this.name + " (" + this.latinName + "): " + this.observations + " observations";
     }
@@ -105,9 +105,9 @@ class Main {
                     birds.show(what);
 
                     break;
+                case "Quit":
+                    return;
             }
-
-            if (choice.equals("Quit")) break;
         }
     }
 }

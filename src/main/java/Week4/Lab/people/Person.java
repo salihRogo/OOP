@@ -54,7 +54,7 @@ class Person {
 class Student extends Person {
     private int ncredits = 0;
     private String student_id;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades = new ArrayList<Integer>();
 
     public Student(String nameAndSurname, String address) {
         super(nameAndSurname, address);
@@ -82,7 +82,7 @@ class Student extends Person {
     }
 
     public void displayGrades(){
-        for (int i : grades){
+        for (int i : this.grades){
             System.out.println(i);
         }
     }

@@ -23,15 +23,13 @@ public class DataStructures {
     }
 
     public Optional<User> getByName(String name){
-        return users
-                .stream()
+        return users.stream()
                 .filter(user -> user.getName().equals(name))
                 .findFirst();
     }
 
     public List<User> findAgeGreaterThan (int age) {
-        return users
-                .stream()
+        return users.stream()
                 .filter(user -> age <= user.getAge())
                 .toList();
     }
@@ -40,31 +38,25 @@ public class DataStructures {
         return users
                 .stream()
                 .map(user -> user.getAge() * 2)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public void multiplyAgeAndPrint() {
-        users
-                .stream()
+        users.stream()
                 .map(user -> user.getAge() * 2)
-                .forEach(y -> {
-                    System.out.println(y);
-                });
+                .forEach(age -> System.out.println(age) );
     }
 
     public List<User> multiplyAgeReturnUserAndPrint(){
-        return users
-                .stream()
-                .peek(y -> {
-                    y.setAge(y.getAge() * 2);
-                })
-                .collect(Collectors.toList());
+        return users.stream()
+                .peek(user -> user.setAge(user.getAge() * 2) )
+                .toList();
     }
 
     public void getByGender (Gender gender){
         users = users.stream()
                 .filter(user -> user.getGender().equals(gender))
-                .collect(Collectors.toList());
+                .toList();
         for (User u : users) {
             System.out.println(u.getName());
         }

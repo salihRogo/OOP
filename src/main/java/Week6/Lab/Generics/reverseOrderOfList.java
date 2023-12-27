@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class reverseOrderOfList {
-    public static < T > List < T > reverseList(List< T > originalList) {
+    public static <T> List<T> reverseList(List< T > originalList) {
         List < T > reversedList = new ArrayList<>();
 
         for (int i = originalList.size() - 1; i >= 0; i--) {

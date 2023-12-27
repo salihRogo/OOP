@@ -28,7 +28,9 @@ class NightSky {
 
     public void printLine() {
         this.starsInTheLastPrint = 0;
+
         Random random = new Random();
+
         for (int i = 0; i < this.width; i++) {
             if (random.nextDouble() <= this.density) {
                 System.out.print("*");
@@ -38,13 +40,13 @@ class NightSky {
                 System.out.print(" ");
             }
         }
-        System.out.println();
     }
 
     public void print() {
         int totalStars = 0;
         for (int i = 0; i < this.height; i++) {
             printLine();
+            System.out.println();
             totalStars += this.starsInTheLastPrint;
         }
         this.starsInTheLastPrint = totalStars;
@@ -58,7 +60,7 @@ class NightSky {
 class Main {
     public static void main(String[] args) {
         NightSky nightSky = new NightSky(0.1, 40, 10);
-        nightSky.printLine();
+        // nightSky.printLine();
 
         NightSky nightSky1 = new NightSky(8, 4);
         nightSky1.print();

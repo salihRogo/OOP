@@ -18,28 +18,39 @@ public class DbConnect {
     }
 
     public void getAllCustomers() throws SQLException {
-        PreparedStatement statement = this
-                .connection
+        PreparedStatement statement = this.connection
                 .prepareStatement("SELECT * FROM customers;");
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            System.out.println(rs.getString("customerNumber"));
-            System.out.println(rs.getString("customerName"));
+            //System.out.println(rs.getString("customerNumber"));
+            //System.out.println(rs.getString("customerName"));
         }
     }
 
-    public void getCustomerById(int customerId) throws SQLException {
+    public void getCustomerById(int customerId, String customerName) throws SQLException {
         PreparedStatement statement = this
                 .connection
-                .prepareStatement("SELECT * FROM customers WHERE customerNumber = ?");
+                .prepareStatement("SELECT * FROM customers WHERE customerNumber = ? AND customerName LIKE ?");
 
         statement.setInt(1, customerId);
+        statement.setString(2, customerName);
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            System.out.println(rs.getString("customerNumber"));
-            System.out.println(rs.getString("customerName"));
+            System.out.print(rs.getString("customerNumber") + "\t");
+            System.out.print(rs.getString("customerName") + "\n");
+        }
+    }
+}
+
+class Main1 {
+    public static void main(String[] args) {
+        DbConnect dbConnect = new DbConnect();
+        try {
+            dbConnect.getCustomerById(103, "Atelier%");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }

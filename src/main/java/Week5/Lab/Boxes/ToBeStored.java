@@ -17,6 +17,7 @@ class Book implements ToBeStored {
         this.weight = weight;
     }
 
+    @Override
     public double weight() {
         return this.weight;
     }
@@ -62,19 +63,19 @@ class Box  {
     private double maxWeight;
     public Box (double maxWeight){
         this.maxWeight = maxWeight;
-        this.things = new ArrayList<ToBeStored>();
+        this.things = new ArrayList<>();
     }
 
     public void add(ToBeStored thing){
-        if (maxWeight > thing.weight()){
-            things.add(thing);
+        if (this.maxWeight > thing.weight()){
+            this.things.add(thing);
         }
     }
 
     public double totalWeight() {
         double total = 0;
-        for (ToBeStored t : this.things){
-            total += t.weight();
+        for (ToBeStored thing : this.things){
+            total += thing.weight();
         }
         return total;
     }

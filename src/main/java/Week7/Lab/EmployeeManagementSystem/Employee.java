@@ -16,7 +16,7 @@ class EmployeeManagementSystem {
     public double calculateTotalSalary(List<Employee> employees) {
         return employees.stream()
                 .mapToDouble(employee -> employee.salary())
-                .sum();
+                .average().orElseGet(() -> 0.0);
     }
 
     public void displayEmployeeDetails(List<Employee> employees) {

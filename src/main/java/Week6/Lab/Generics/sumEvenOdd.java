@@ -8,7 +8,7 @@ public class sumEvenOdd {
         double sumOfOdd = 0;
 
         for (T number : numbers) {
-            if ( number.doubleValue() % 2 == 0) {
+            if (number.doubleValue() % 2 == 0) {
                 sumOfEven += number.doubleValue();
             } else {
                 sumOfOdd += number.doubleValue();

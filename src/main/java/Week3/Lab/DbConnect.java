@@ -7,9 +7,7 @@ public class DbConnect {
     private static final String USERNAME = "oop";
     private static final String PASSWORD = "";
 
-
     private Connection connection = null;
-
 
     public DbConnect() {
         try {
@@ -19,18 +17,17 @@ public class DbConnect {
         }
     }
 
-
     public void getAllTasks() throws SQLException {
         PreparedStatement statement = this
                 .connection
                 .prepareStatement("SELECT * FROM tasks;");
         ResultSet rs = statement.executeQuery();
         while (rs.next()) {
-            System.out.println(rs.getString("task_description"));
-            System.out.println(rs.getString("task_status"));
+            System.out.print(rs.getString("task_description"));
+            System.out.print(" -> ");
+            System.out.print(rs.getString("task_status"));
+            System.out.println();
         }
     }
-
-
 }
 

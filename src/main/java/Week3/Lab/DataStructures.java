@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class DataStructures {
     private List<TaskItem> tasks = new ArrayList<>();
@@ -37,7 +38,7 @@ public class DataStructures {
         return tasks
                 .stream()
                 .filter(tasks -> tasks.getId() >= (2))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // TODO create a method that will, by using the forEach stream method, print to the console the description of each task
