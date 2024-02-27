@@ -26,11 +26,12 @@ public class DataStructures {
         return users.stream()
                 .filter(user -> user.getName().equals(name))
                 .findFirst();
+
     }
 
-    public List<User> findAgeGreaterThan (int age) {
+    public List<User> findAgeGreaterThan (int age1) {
         return users.stream()
-                .filter(user -> age <= user.getAge())
+                .filter(user -> age1 < user.getAge())
                 .toList();
     }
 
@@ -54,11 +55,8 @@ public class DataStructures {
     }
 
     public void getByGender (Gender gender){
-        users = users.stream()
+         users.stream()
                 .filter(user -> user.getGender().equals(gender))
-                .toList();
-        for (User u : users) {
-            System.out.println(u.getName());
-        }
+                 .forEach(user -> System.out.println(user.getName()));
     }
 }

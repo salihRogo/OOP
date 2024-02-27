@@ -10,6 +10,7 @@ class Dictionary {
     public void add(String word, String translation) {
 
         this.dictionary.put(word, translation);
+
     }
 
     public String translate(String word) {

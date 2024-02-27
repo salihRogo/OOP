@@ -4,27 +4,17 @@ import javax.xml.crypto.Data;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
         DataStructures ds = new DataStructures();
 
-        List<User> resultSet = ds.multiplyAgeReturnUserAndPrint();
+        ds.getByGender(Gender.MALE);
 
-        for (User u : resultSet) {
+        List<User> users = ds.getAll();
+        for (User u : users) {
             System.out.println(u);
         }
-
-        List<User> task2 = ds.multiplyAgeReturnUserAndPrint();
-
-        for (User u : task2) {
-            System.out.println(u);
-        }
-
-        //List<User> task3 = ds.getAll();
-        /*
-        for(User u : task3){
-            System.out.println(u);
-        } */
     }
 }

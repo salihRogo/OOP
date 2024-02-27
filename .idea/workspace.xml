@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17977eb2-9b55-4bb4-a51d-803681e81a4e" name="Changes" comment="Test">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Week13/Lab/Task3/TextFormater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week13/Lab/Task3/TextFormater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DataStructures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DataStructures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DbConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/DbConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week3/Lecture/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week3/Lecture/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsDictionary/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week6/Lab/HashMapsDictionary/Dictionary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -45,7 +50,7 @@
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -64,7 +69,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/salihrogo/IdeaProjects/ObjectOrientedProgramming/src/main/java/Week12NeValja&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/salihrogo/IdeaProjects/ObjectOrientedProgramming/files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,11 +86,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/Week12NeValja" />
       <recent name="$PROJECT_DIR$/files" />
+      <recent name="$PROJECT_DIR$/src/main/java/Week12NeValja" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files" />
+      <recent name="$PROJECT_DIR$/src/main/java/FinalSaKolegama" />
       <recent name="$PROJECT_DIR$/Files" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -93,13 +99,13 @@
       <recent name="Week12NeValja.Lab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="ChatApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week12.Lab.ChatApplication" />
+  <component name="RunManager" selected="Application.FinalSaKolegama.MainRun">
+    <configuration name="FinalSaKolegama.MainRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FinalSaKolegama.MainRun" />
       <module name="ObjectOrientedProgramming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week12.Lab.*" />
+          <option name="PATTERN" value="FinalSaKolegama.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week12.Lab.ChatClient" />
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidtermExam1stMakeupSalkan.Main2" />
       <module name="ObjectOrientedProgramming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week12.Lab.*" />
+          <option name="PATTERN" value="MidtermExam1stMakeupSalkan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week13.Lab.Task2FactoryMethod.Main" />
+    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MidtermExam1stMakeupSalkan.Main3" />
       <module name="ObjectOrientedProgramming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week13.Lab.Task2FactoryMethod.*" />
+          <option name="PATTERN" value="MidtermExam1stMakeupSalkan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkProgramming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week12.Lecture.NetworkProgramming" />
+    <configuration name="MainRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FinalExamFirstTerm.MainRun" />
       <module name="ObjectOrientedProgramming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week12.Lecture.*" />
+          <option name="PATTERN" value="FinalExamFirstTerm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,29 +152,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentSystemTest.testStudentWithId100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StartMeBitch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PreparationWithImanOko.StartMeBitch" />
       <module name="ObjectOrientedProgramming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Week11.*" />
+          <option name="PATTERN" value="PreparationWithImanOko.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Week11" />
-      <option name="MAIN_CLASS_NAME" value="Week11.StudentSystemTest" />
-      <option name="METHOD_NAME" value="testStudentWithId100" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ChatApplication" />
-        <item itemvalue="Application.ChatClient" />
-        <item itemvalue="Application.NetworkProgramming" />
-        <item itemvalue="JUnit.StudentSystemTest.testStudentWithId100" />
+        <item itemvalue="Application.Main3" />
+        <item itemvalue="Application.Main2" />
+        <item itemvalue="Application.MainRun" />
+        <item itemvalue="Application.StartMeBitch" />
+        <item itemvalue="Application.FinalSaKolegama.MainRun" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +221,15 @@
       <workItem from="1700342030273" duration="22938000" />
       <workItem from="1700445340389" duration="3192000" />
       <workItem from="1701774558703" duration="76042000" />
-      <workItem from="1703678600476" duration="4061000" />
+      <workItem from="1703678600476" duration="4698000" />
+      <workItem from="1704533812507" duration="4573000" />
+      <workItem from="1705575517633" duration="37983000" />
+      <workItem from="1706689859949" duration="355000" />
+      <workItem from="1706960596390" duration="22445000" />
+      <workItem from="1707306615434" duration="12008000" />
+      <workItem from="1707423479283" duration="5920000" />
+      <workItem from="1707789903170" duration="1802000" />
+      <workItem from="1708362920433" duration="1709000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -263,5 +274,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ObjectOrientedProgramming$StudentSystemTest.ic" NAME="StudentSystemTest Coverage Results" MODIFIED="1705940218740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Week11.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -23,8 +23,8 @@ public class DbConnect {
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            //System.out.println(rs.getString("customerNumber"));
-            //System.out.println(rs.getString("customerName"));
+            System.out.println(rs.getString("customerNumber"));
+            System.out.println(rs.getString("customerName"));
         }
     }
 
